@@ -1,4 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { IsDate } from 'class-validator';
 
 @Entity()
 export class Stream {
@@ -8,7 +9,8 @@ export class Stream {
     @Column()
     title: string;
 
-    @Column()
+    @Column('date')
+    @IsDate()
     startStream: Date;
 
     @Column()
