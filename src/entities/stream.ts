@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 import { IsDate } from 'class-validator';
 
 @Entity()
-export class Stream {
+export default class Stream {
     @PrimaryGeneratedColumn('uuid')
     id: number;
 
